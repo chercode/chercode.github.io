@@ -3,217 +3,331 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shahrzad Mirzaei — Application Developer & AI/ML Engineer</title>
+  <title>Shahrzad Mirzaei — AI/ML & Software Engineer</title>
   <meta name="description"
-        content="Minimal, code-focused portfolio of Shahrzad Mirzaei — application developer & AI/ML engineer working on production-grade research software." />
+        content="Shahrzad Mirzaei — AI/ML engineer and software engineer building production-grade systems for imaging, computer vision, and data-intensive applications." />
+  <meta name="theme-color" content="#020817" />
 
-  <!-- Basic SEO -->
+  <!-- Basic SEO / OG -->
   <meta property="og:title" content="Shahrzad Mirzaei — Portfolio" />
   <meta property="og:description"
-        content="Application Developer & AI/ML Engineer. Projects, publications, and production-grade research software." />
+        content="Machine Learning Engineer & Software Engineer. Hyperspectral imaging, spectral reconstruction, RGB–NIR graphics, and robust web & mobile tools." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chercode.github.io/" />
 
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="logo">SM</div>
-  <nav class="nav" aria-label="Primary">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-    <button id="theme-toggle" aria-label="Toggle dark/light theme">●</button>
-  </nav>
-</header>
+<div class="layout">
 
-<main>
-  <!-- Hero -->
-  <section id="about" class="hero" aria-labelledby="hero-title">
-    <div class="hero-text">
-      <h1 id="hero-title">Shahrzad Mirzaei</h1>
-      <p class="hero-role">Application Developer · AI/ML Engineer</p>
-      <p class="hero-copy">
-        I build reliable, production-ready applications that connect
-        <span class="mono">research</span>,
-        <span class="mono">machine learning</span>, and
-        <span class="mono">clean engineering</span>.
-      </p>
-      <div class="hero-links">
-        <a href="mailto:sma318@sfu.ca">Email</a>
-        <a href="https://github.com/chercode" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/shahrzad-mirzaei" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://scholar.google.ca/citations?user=B_XY4b0AAAAJ" target="_blank" rel="noopener">Scholar</a>
-      </div>
+  <!-- Left column -->
+  <aside class="sidebar">
+    <div class="id-block">
+      <div class="avatar-circle">SM</div>
+      <h1 class="name">Shahrzad<br>Mirzaei</h1>
+      <p class="tagline">AI/ML Engineer · Software Engineer</p>
     </div>
-    <div class="hero-panel">
-      <h2 class="mono">Now</h2>
+
+    <p class="blurb">
+      Machine Learning Engineer & published researcher (ACM SIGGRAPH,
+      ACM MobiCom, ACM IMWUT/UbiComp) with 3+ years designing and shipping
+      <span class="mono">reliable</span>,
+      <span class="mono">reproducible</span>, and
+      <span class="mono">well-documented</span> systems in imaging,
+      computer vision, and data-intensive applications.
+    </p>
+
+    <nav class="side-nav" aria-label="Sections">
+      <a href="#about" class="nav-link active">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="side-links">
+      <a href="mailto:sma318@sfu.ca">sma318@sfu.ca</a>
+      <a href="tel:+17789519819">+1 778 951 9819</a>
+      <a href="https://github.com/chercode" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/shahrzad-mirzaei" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.ca/citations?user=B_XY4b0AAAAJ" target="_blank" rel="noopener">Scholar</a>
+    </div>
+
+    <div class="side-meta">
+      <span>Vancouver, BC</span>
+      <span>Open to SWE / ML / Research roles</span>
+      <span class="year">© <span id="year"></span> Shahrzad Mirzaei</span>
+    </div>
+  </aside>
+
+  <!-- Right content -->
+  <main class="content">
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>// about</h2>
       <p>
-        Designing and integrating full-stack, ML-powered tools for
-        imaging and data-intensive systems — with a focus on
-        performance, observability, and clear documentation.
+        I specialize in turning cutting-edge research into production-grade software:
+        smartphone-based hyperspectral imaging, truthful spectral reconstruction,
+        RGB–NIR image editing, and robust data/ML pipelines.
       </p>
-      <ul class="hero-tags">
-        <li>Python · C++ · JavaScript</li>
-        <li>Flask · React · REST</li>
-        <li>PyTorch · TensorFlow · ONNX</li>
-        <li>Docker · CI/CD · AWS</li>
+      <p>
+        My work spans <strong>deep learning</strong>, <strong>computer vision</strong>,
+        <strong>computational photography</strong>, and <strong>full-stack development</strong> —
+        with emphasis on measurable performance, clean abstractions, and reproducibility.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h2>// education</h2>
+
+      <article class="xp">
+        <div class="xp-header">
+          <h3>M.Sc. Computer Science</h3>
+          <span class="xp-meta">Simon Fraser University · 2022–2025</span>
+        </div>
+        <ul>
+          <li>Research focus: hyperspectral imaging, spectral reconstruction, mobile vision systems.</li>
+          <li>Coursework: Machine Learning, Probabilistic ML, Reinforcement Learning, Computational Photography.</li>
+        </ul>
+      </article>
+
+      <article class="xp">
+        <div class="xp-header">
+          <h3>B.Sc. Computer Science</h3>
+          <span class="xp-meta">Sharif University of Technology · 2016–2020</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>// experience</h2>
+
+      <article class="xp">
+        <div class="xp-header">
+          <h3>Graduate Research Assistant — Machine Learning Engineer</h3>
+          <span class="xp-meta">Multimedia Systems Lab, SFU · 2022–2025</span>
+        </div>
+        <ul>
+          <li>
+            Led development of a smartphone-based hyperspectral imaging system for
+            food safety and medical diagnostics, achieving &gt;94% accuracy in
+            real-world liquid identification across devices and lighting.
+          </li>
+          <li>
+            Designed a transformer-based Truthful Spectral Reconstruction (TSR) model
+            to recover 68 spectral bands (400–1000nm) from RGB+NIR while maintaining
+            color and spectral fidelity.
+          </li>
+          <li>
+            Built classification pipelines (SVM, XGBoost, MLP, CNN-BiLSTM) for robust
+            cross-device, cross-illumination liquid classification.
+          </li>
+          <li>
+            Applied intrinsic decomposition, highlight removal, inpainting, and
+            color-space mapping to reduce non-Lambertian artifacts.
+          </li>
+          <li>
+            Created synthetic datasets using Blender & Mitsuba to augment real data,
+            then deployed ONNX-optimized models in an Android app for real-time analysis.
+          </li>
+        </ul>
+      </article>
+
+      <article class="xp">
+        <div class="xp-header">
+          <h3>Graduate Teaching Assistant</h3>
+          <span class="xp-meta">School of Computing Science, SFU · 2022–2025</span>
+        </div>
+        <ul>
+          <li>
+            TA for AI, Database Systems, Computational Data Science, Biomedical Imaging,
+            and Software Engineering; mentored &gt;300 students.
+          </li>
+          <li>
+            Reviewed architecture and code quality, designed rubrics, and maintained
+            fair, consistent evaluation for large-scale courses.
+          </li>
+        </ul>
+      </article>
+
+      <article class="xp">
+        <div class="xp-header">
+          <h3>Software Engineer Intern</h3>
+          <span class="xp-meta">ARON Company · 2020–2021</span>
+        </div>
+        <ul>
+          <li>
+            Built Flask–PostgreSQL–JavaScript web apps with REST APIs and JWT authentication
+            for internal analytics.
+          </li>
+          <li>
+            Improved performance and maintainability through query optimization
+            and modular API design.
+          </li>
+        </ul>
+      </article>
+
+      <article class="xp">
+        <div class="xp-header">
+          <h3>Data Scientist Intern</h3>
+          <span class="xp-meta">Kojafood · 2020</span>
+        </div>
+        <ul>
+          <li>
+            Built a hybrid NLP + collaborative filtering recommender using
+            10K+ SQL reviews (TF-IDF sentiment, geolocation, ratings).
+          </li>
+          <li>
+            Deployed Random Forest and XGBoost models that increased CTR by 85%
+            over baseline recommendations.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Projects / Key Systems -->
+    <section id="projects" class="section">
+      <h2>// selected-projects</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-label">End-to-End ML System</div>
+          <h3>MobiLyzer — Mobile Liquid Analyzer</h3>
+          <p>
+            Smartphone-based pipeline for liquid fraud detection and quality analysis:
+            spectral reconstruction, intrinsic decomposition, robust classifiers,
+            and ONNX-optimized deployment on Android.
+          </p>
+          <div class="card-tags">
+            <span>Python</span><span>PyTorch</span><span>ONNX</span>
+            <span>Android</span><span>Realtime</span>
+          </div>
+          <a href="https://github.com/chercode/mobilyzer-imwut25" target="_blank" rel="noopener">
+            View repository →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Graphics & Vision</div>
+          <h3>Interactive RGB+NIR Photo Editing</h3>
+          <p>
+            Browser-based editor merging RGB + NIR for enhanced detail and creative edits.
+            Implemented in TypeScript/React with guided filtering and modular fusion operators.
+          </p>
+          <div class="card-tags">
+            <span>TypeScript</span><span>React</span><span>Web</span>
+          </div>
+          <a href="https://github.com/samuel-antunes/RGB-NiR-Webapp" target="_blank" rel="noopener">
+            View repository →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="card-label">Modeling & Tooling</div>
+          <h3>MobiSpectral</h3>
+          <p>
+            Deep learning toolkit for hyperspectral reconstruction from mobile RGB+NIR.
+            Includes training/eval scripts, domain adaptation, and fraud detection models.
+          </p>
+          <div class="card-tags">
+            <span>PyTorch</span><span>Computer Vision</span>
+          </div>
+          <a href="https://github.com/mobispectral/mobicom23_mobispectral" target="_blank" rel="noopener">
+            View repository →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section">
+      <h2>// research</h2>
+      <ul class="pubs">
+        <li>
+          <strong>MobiLyzer: Fine-grained Mobile Liquid Analyzer</strong>,
+          Proc. ACM IMWUT/UbiComp 2025 (accepted).
+          <span>Smartphone-based hyperspectral liquid analysis.</span>
+        </li>
+        <li>
+          <strong>Interactive RGB+NIR Photo Editing Tool</strong>,
+          ACM SIGGRAPH 2024.
+          <a href="https://dl.acm.org/doi/10.1145/3641234.3671053" target="_blank" rel="noopener">paper</a>
+        </li>
+        <li>
+          <strong>MobiSpectral: Hyperspectral Imaging on Mobile Devices</strong>,
+          ACM MobiCom 2023.
+          <a href="https://dl.acm.org/doi/10.1145/3570361.3613296" target="_blank" rel="noopener">paper</a>
+        </li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <h2 class="section-title">Technical Stack</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Languages</h3>
-        <p>Python, C++, Java, JavaScript, TypeScript, SQL, MATLAB</p>
-      </article>
-      <article class="card">
-        <h3>Backend & APIs</h3>
-        <p>Flask, Node.js, Express, .NET, REST, JSON, OAuth, JWT</p>
-      </article>
-      <article class="card">
-        <h3>Frontend & UI</h3>
-        <p>HTML5, CSS3, React, Responsive Design, UX prototyping</p>
-      </article>
-      <article class="card">
-        <h3>ML & Data</h3>
-        <p>PyTorch, TensorFlow, Scikit-learn, NumPy, Pandas, OpenCV, ONNX</p>
-      </article>
-      <article class="card">
-        <h3>Infra & DevOps</h3>
-        <p>AWS EC2, Docker, GitHub Actions, PostgreSQL, MySQL, MS SQL Server</p>
-      </article>
-      <article class="card">
-        <h3>Core Strengths</h3>
-        <p>System design, integration, testing, documentation, mentoring, SDLC ownership</p>
-      </article>
-    </div>
-  </section>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>// stack</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Languages</h3>
+          <p>Python, C++, Java, JavaScript, TypeScript, SQL, MATLAB</p>
+        </div>
+        <div>
+          <h3>ML & AI</h3>
+          <p>
+            PyTorch, TensorFlow, ONNX, OpenCV, Scikit-learn, NumPy, Pandas,
+            CNNs, LSTMs, GANs, Transformers, Computer Vision
+          </p>
+        </div>
+        <div>
+          <h3>Graphics & Imaging</h3>
+          <p>OpenGL, Blender, Mitsuba, Image Processing, Computational Photography, Spectral Imaging</p>
+        </div>
+        <div>
+          <h3>Platforms & Tools</h3>
+          <p>Docker, Git, AWS EC2/S3, Android Studio, React, Node.js, Flask</p>
+        </div>
+        <div>
+          <h3>Specialties</h3>
+          <p>
+            Real-time ML, model deployment, dataset design, evaluation tooling,
+            documentation, and research-to-product translation.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section">
-    <h2 class="section-title">Experience</h2>
-    <div class="timeline">
+    <!-- Achievements & Service -->
+    <section id="achievements" class="section">
+      <h2>// achievements</h2>
+      <ul class="pubs">
+        <li>Full graduate scholarship via combined Research & Teaching Assistantships (3 years).</li>
+        <li>Publications in top-tier A* venues: ACM SIGGRAPH, ACM MobiCom, ACM IMWUT/UbiComp.</li>
+        <li>
+          Volunteered at major conferences & events including SIGGRAPH 2025,
+          IEEE CCECE 2025, IEEE INFOCOM 2024, ACM MMSys 2023, and SFU community initiatives.
+        </li>
+      </ul>
+    </section>
 
-      <article class="timeline-item">
-        <h3>Graduate Research Assistant — Software & ML Engineer</h3>
-        <div class="meta">Multimedia Systems Lab, Simon Fraser University · 2022 – 2023</div>
-        <ul>
-          <li>Built end-to-end tools for spectral data collection, image analysis, and visualization.</li>
-          <li>Integrated ONNX-optimized ML models into Flask/React apps for real-time analysis.</li>
-          <li>Owned requirements, UML design, testing, and deployment across web & mobile.</li>
-        </ul>
-      </article>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>// contact</h2>
+      <p>
+        I’m interested in roles where I can own real systems end-to-end:
+        reading the paper, shaping the design, implementing the models and APIs,
+        and delivering something reliable enough for users.
+      </p>
+      <p class="mono">
+        → sma318@sfu.ca
+      </p>
+    </section>
 
-      <article class="timeline-item">
-        <h3>Graduate Teaching Assistant</h3>
-        <div class="meta">School of Computing Science, SFU · 2022 – Present</div>
-        <ul>
-          <li>Supported courses in AI, Software Engineering, Databases, Data Science, Imaging.</li>
-          <li>Designed rubrics, graded code, and mentored 300+ students in Python, Java, SQL.</li>
-        </ul>
-      </article>
-
-      <article class="timeline-item">
-        <h3>Software Engineer Intern</h3>
-        <div class="meta">ARON Company · 2020 – 2021</div>
-        <ul>
-          <li>Developed RESTful Flask + PostgreSQL services for internal automation.</li>
-          <li>Implemented authentication, optimized queries, and shipped stable releases.</li>
-        </ul>
-      </article>
-
-      <article class="timeline-item">
-        <h3>Data Scientist Intern</h3>
-        <div class="meta">Kojafood · 2020</div>
-        <ul>
-          <li>Built a recommendation engine integrating SQL + Python APIs.</li>
-          <li>Improved engagement through scalable, production-aware ML.</li>
-        </ul>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Selected Projects</h2>
-    <div class="grid">
-
-      <article class="card">
-        <h3>MobiLyzer — Mobile Liquid Analyzer</h3>
-        <p>
-          End-to-end mobile spectral analysis pipeline: Python backend, ONNX runtime, Android client.
-        </p>
-        <p class="meta">
-          IMWUT/UbiComp · Production-focused, reproducible, documented.
-        </p>
-        <a href="https://github.com/chercode/mobilyzer-imwut25" target="_blank" rel="noopener">View code</a>
-      </article>
-
-      <article class="card">
-        <h3>Interactive RGB+NIR Photo Editing</h3>
-        <p>
-          React + TypeScript + REST tool for real-time RGB–NIR fusion and editing in the browser.
-        </p>
-        <p class="meta">ACM SIGGRAPH 2024</p>
-        <a href="https://github.com/samuel-antunes/RGB-NiR-Webapp" target="_blank" rel="noopener">View code</a>
-      </article>
-
-      <article class="card">
-        <h3>MobiSpectral</h3>
-        <p>
-          Deep learning inference modules for mobile hyperspectral imaging and analysis.
-        </p>
-        <p class="meta">ACM MobiCom 2023</p>
-        <a href="https://github.com/mobispectral/mobicom23_mobispectral" target="_blank" rel="noopener">View code</a>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- Publications -->
-  <section id="publications" class="section">
-    <h2 class="section-title">Publications</h2>
-    <ul class="list">
-      <li>
-        Interactive RGB+NIR Photo Editing — ACM SIGGRAPH 2024
-        <a href="https://dl.acm.org/doi/10.1145/3641234.3671053" target="_blank" rel="noopener">Paper</a>
-      </li>
-      <li>
-        MobiSpectral — ACM MobiCom 2023
-        <a href="https://dl.acm.org/doi/10.1145/3570361.3613296" target="_blank" rel="noopener">Paper</a>
-      </li>
-      <li>
-        MobiLyzer — Fine-grained Mobile Liquid Analyzer — ACM IMWUT/UbiComp (under publication)
-      </li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact</h2>
-    <p>
-      Open to roles in software engineering, ML engineering, and research-driven product teams.
-    </p>
-    <p class="mono">
-      sma318@sfu.ca · Vancouver, BC ·
-      <a href="https://github.com/chercode" target="_blank" rel="noopener">github.com/chercode</a>
-    </p>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <span>© <span id="year"></span> Shahrzad Mirzaei</span>
-  <span class="dot">•</span>
-  <span>Built with HTML, CSS, and vanilla JS</span>
-</footer>
+  </main>
+</div>
 
 <script src="./js/main.js"></script>
 </body>
