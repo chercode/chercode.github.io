@@ -1,0 +1,32 @@
+:root{ --bg: #0b0c10; --fg:#e6e6e6; --muted:#9aa3ab; --accent:#8ec5ff; --card:#14161b; --shadow: 0 10px 30px rgba(0,0,0,.25); }
+@media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --fg:#1c1f24; --muted:#5b6470; --card:#f4f6f9; } }
+*{ box-sizing:border-box }
+html,body{ height:100%; margin:0; }
+body{ font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--fg); }
+.site-header{ position:fixed; top:0; left:0; right:0; height:56px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; backdrop-filter:saturate(140%) blur(8px); background:color-mix(in oklab, var(--bg) 90%, transparent); z-index:10; border-bottom:1px solid color-mix(in oklab, var(--fg) 10%, transparent); }
+.brand{ font-weight:700; text-decoration:none; color:var(--fg); }
+.top-nav{ display:flex; gap:8px; }
+.nav-link{ background:transparent; color:var(--fg); border:1px solid color-mix(in oklab, var(--fg) 20%, transparent); padding:6px 10px; border-radius:999px; cursor:pointer }
+.nav-link:focus{ outline:2px solid var(--accent) }
+.main{ padding-top:56px }
+.hero{ position:relative; height:72vh; min-height:420px; }
+#glcanvas{ position:absolute; inset:0; width:100%; height:100%; display:block; }
+.hero-overlay{ position:absolute; inset:0; display:grid; place-items:center; pointer-events:none; }
+.bands{ display:flex; gap:16px; pointer-events:auto; }
+.band{ font-size:18px; padding:10px 16px; border-radius:999px; border:none; background:linear-gradient(90deg, #ff3cac, #784ba0, #2b86c5); color:white; cursor:pointer; box-shadow:var(--shadow); opacity:.9; }
+.band:hover{ transform:translateY(-1px) scale(1.02); }
+.hint{ position:absolute; bottom:16px; left:50%; transform:translateX(-50%); color:var(--muted); font-size:14px }
+.section{ padding:48px 16px; max-width:1100px; margin:0 auto; }
+.section h2{ margin:0 0 16px 0; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:16px; }
+.card{ background:var(--card); padding:16px; border-radius:16px; box-shadow:var(--shadow); border:1px solid color-mix(in oklab, var(--fg) 8%, transparent); }
+.card h3{ margin:0 0 8px 0; font-size:18px }
+.card p{ margin:0 0 8px 0; color:var(--muted) }
+.card a{ color:var(--fg); text-decoration:underline }
+.askme{ position:fixed; right:16px; bottom:16px; width:min(420px, 92vw); background:var(--card); border-radius:16px; box-shadow:var(--shadow); border:1px solid color-mix(in oklab, var(--fg) 8%, transparent); }
+.askme-inner{ padding:16px; }
+.askme form{ display:flex; gap:8px; }
+.askme input{ flex:1; padding:10px; border-radius:10px; border:1px solid color-mix(in oklab, var(--fg) 15%, transparent); background:transparent; color:var(--fg) }
+.askme button{ padding:10px 14px; border-radius:10px; border:1px solid color-mix(in oklab, var(--fg) 20%, transparent); background:transparent; color:var(--fg); cursor:pointer }
+.site-footer{ padding:24px 16px; text-align:center; color:var(--muted) }
+.visually-hidden{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }

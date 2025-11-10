@@ -1,0 +1,32 @@
+{
+"profile": {
+"name": "Shahrzad Mirzaei",
+"title": "AI/ML Engineer • Software Engineer"
+},
+"links": {
+"cv": "https://example.com/resume.pdf",
+"github": "https://github.com/chercode",
+"linkedin": "https://linkedin.com/in/shahrzad-mirzaei",
+"scholar": "https://scholar.google.ca/citations?user=B_XY4b0AAAAJ"
+},
+"skills": [
+{"name": "Programming", "items": ["Python","C++","Java","JavaScript","TypeScript","SQL","MATLAB"]},
+{"name": "ML / AI", "items": ["PyTorch","TensorFlow","Keras","ONNX","TorchScript","HuggingFace","Sklearn","CNNs","LSTM","GANs","VAEs","CV","NLP"]},
+{"name": "Graphics", "items": ["OpenGL","Blender","Mitsuba Renderer"]},
+{"name": "Dev Tools", "items": ["Docker","Git","AWS EC2/S3","GCP","Android Studio","React","Node.js","Flask","FastAPI","Jupyter"]},
+{"name": "Specializations", "items": ["Image Processing","3D Rendering","Computational Photography","Hyperspectral Imaging","ONNX Runtime","Plotly","Bokeh"]}
+],
+"papers": [
+{"title": "Interactive RGB+NIR Photo Editing — ACM SIGGRAPH 2024", "venue": "ACM SIGGRAPH 2024", "url": "https://dl.acm.org/doi/10.1145/3641234.3671053"},
+{"title": "MobiSpectral: Hyperspectral Imaging on Mobile Devices — ACM MobiCom 2023", "venue": "ACM MobiCom 2023", "url": "https://dl.acm.org/doi/10.1145/3570361.3613296"},
+{"title": "MobiLyzer: Fine-grained Mobile Liquid Analyzer — ACM IMWUT/UbiComp 2026", "venue": "ACM IMWUT/UbiComp 2026", "url": "#"}
+],
+"projects": [
+{"name": "RGB+NIR Web App", "description": "Browser tool merging RGB & NIR images for enhanced detail (guided filtering).", "url": "https://github.com/samuel-antunes/RGB-NiR-Webapp"},
+{"name": "MobiSpectral (MobiCom'23)", "description": "Hyperspectral band reconstruction from smartphone RGB+NIR.", "url": "https://github.com/mobispectral/mobicom23_mobispectral"},
+{"name": "MobiLyzer Android App", "description": "ONNX-optimized real-time spectral analysis on smartphones.", "url": "#"}
+],
+"talks": [
+{"title": "Spectral Reconstruction for Mobile Imaging", "where": "Seminar", "url": "#"}
+]
+}

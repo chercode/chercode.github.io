@@ -1,0 +1,63 @@
+<!doctype html>
+<section id="code" class="section" aria-label="Code">
+<h2>Code</h2>
+<div class="grid" data-grid="code"></div>
+</section>
+
+
+<section id="talks" class="section" aria-label="Talks">
+<h2>Talks</h2>
+<div class="grid" data-grid="talks"></div>
+</section>
+
+
+<!-- Optional Ask Me (client-only) -->
+<aside id="askme-panel" class="askme" aria-label="Ask Me" hidden>
+<div class="askme-inner">
+<h3>Ask Me</h3>
+<form id="askme-form" aria-label="Ask a question">
+<label for="askme-input" class="visually-hidden">Your question</label>
+<input id="askme-input" name="q" type="text" required placeholder="Try: What is spectral reconstruction?" />
+<button type="submit">Send</button>
+</form>
+<div id="askme-response" class="askme-response" role="region" aria-live="polite"></div>
+<p class="askme-note">This runs entirely in your browser with mock data. You can plug a serverless LLM later.</p>
+</div>
+</aside>
+</main>
+
+
+<footer class="site-footer" role="contentinfo">
+<p><span id="copyright"></span> · <a id="cv-link" href="#">CV</a> · <a id="gh-link" href="#">GitHub</a> · <a id="li-link" href="#">LinkedIn</a> · <a id="gs-link" href="#">Google Scholar</a></p>
+</footer>
+
+
+<script type="module">
+import { initFlowField } from '/js/flowfield.js';
+import { initRenderer } from '/js/renderer.js';
+import { initUI } from '/js/ui.js';
+import { loadContent } from '/js/content.js';
+import { initAskMe } from '/js/llm.js';
+import '/meta/analytics.js';
+
+
+const canvas = document.getElementById('glcanvas');
+const gl = canvas.getContext('webgl2', { antialias: false, preserveDrawingBuffer: false });
+const supportsGL2 = !!gl;
+
+
+const state = { particleCount: 8000, dpi: Math.min(1.5, window.devicePixelRatio || 1), prefersReduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches };
+
+
+if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) state.particleCount = 4000;
+if (!supportsGL2 || state.prefersReduced) state.particleCount = 1500;
+
+
+const field = initFlowField();
+const renderer = initRenderer(gl, canvas, state, field);
+initUI(renderer, state);
+loadContent();
+initAskMe();
+</script>
+</body>
+</html>
