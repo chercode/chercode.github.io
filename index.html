@@ -33,31 +33,31 @@
 
 
 <script type="module">
-import { initFlowField } from '/js/flowfield.js';
-import { initRenderer } from '/js/renderer.js';
-import { initUI } from '/js/ui.js';
-import { loadContent } from '/js/content.js';
-import { initAskMe } from '/js/llm.js';
-import '/meta/analytics.js';
+  import { initFlowField } from './js/flowfield.js';
+  import { initRenderer } from './js/renderer.js';
+  import { initUI } from './js/ui.js';
+  import { loadContent } from './js/content.js';
+  import { initAskMe } from './js/llm.js';
+  import './meta/analytics.js';
 
+  const canvas = document.getElementById('glcanvas');
+  const gl = canvas.getContext('webgl2', { antialias: false, preserveDrawingBuffer: false });
+  const supportsGL2 = !!gl;
 
-const canvas = document.getElementById('glcanvas');
-const gl = canvas.getContext('webgl2', { antialias: false, preserveDrawingBuffer: false });
-const supportsGL2 = !!gl;
+  const state = {
+    particleCount: 8000,
+    dpi: Math.min(1.5, window.devicePixelRatio || 1),
+    prefersReduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  };
 
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) state.particleCount = 4000;
+  if (!supportsGL2 || state.prefersReduced) state.particleCount = 1500;
 
-const state = { particleCount: 8000, dpi: Math.min(1.5, window.devicePixelRatio || 1), prefersReduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches };
-
-
-if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) state.particleCount = 4000;
-if (!supportsGL2 || state.prefersReduced) state.particleCount = 1500;
-
-
-const field = initFlowField();
-const renderer = initRenderer(gl, canvas, state, field);
-initUI(renderer, state);
-loadContent();
-initAskMe();
+  const field = initFlowField();
+  const renderer = initRenderer(gl, canvas, state, field);
+  initUI(renderer, state);
+  loadContent();
+  initAskMe();
 </script>
 </body>
 </html>
