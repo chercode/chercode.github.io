@@ -3,129 +3,218 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shahrzad Mirzaei — AI/ML • Graphics</title>
-  <meta name="description" content="AI/ML engineer & researcher. Spectral imaging, computational photography, WebGL graphics. Portfolio, papers, code, talks." />
+  <title>Shahrzad Mirzaei — Application Developer & AI/ML Engineer</title>
+  <meta name="description"
+        content="Minimal, code-focused portfolio of Shahrzad Mirzaei — application developer & AI/ML engineer working on production-grade research software." />
 
-  <!-- SEO / OpenGraph -->
+  <!-- Basic SEO -->
   <meta property="og:title" content="Shahrzad Mirzaei — Portfolio" />
-  <meta property="og:description" content="Spectral Flow Field portfolio: projects, papers, code, talks." />
+  <meta property="og:description"
+        content="Application Developer & AI/ML Engineer. Projects, publications, and production-grade research software." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://chercode.github.io/" />
-  <meta property="og:image" content="https://chercode.github.io/assets/favicon.svg" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Shahrzad Mirzaei — Portfolio" />
-  <meta name="twitter:description" content="Spectral Flow Field portfolio: projects, papers, code, talks." />
 
-  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preload" href="./css/styles.css" as="style" />
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <a class="brand" href="#hero" aria-label="Go to top">Shahrzad Mirzaei</a>
-    <nav aria-label="Primary" class="top-nav">
-      <button class="nav-link" data-target="#skills">Skills</button>
-      <button class="nav-link" data-target="#papers">Papers</button>
-      <button class="nav-link" data-target="#code">Code</button>
-      <button class="nav-link" data-target="#talks">Talks</button>
-      <button class="nav-link askme-toggle" aria-expanded="false" aria-controls="askme-panel">Ask Me</button>
-    </nav>
-  </header>
+<header class="site-header">
+  <div class="logo">SM</div>
+  <nav class="nav" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle" aria-label="Toggle dark/light theme">●</button>
+  </nav>
+</header>
 
-  <main id="main" class="main" tabindex="-1">
-    <!-- Hero / Spectral Flow Field -->
-    <section id="hero" class="hero" aria-label="Spectral Flow Field">
-      <canvas id="glcanvas" aria-hidden="true"></canvas>
-      <div class="hero-overlay" role="group" aria-label="Hero controls">
-        <div class="bands" role="tablist" aria-label="Sections">
-          <button role="tab" aria-controls="skills" aria-selected="true" class="band" data-target="#skills">Skills</button>
-          <button role="tab" aria-controls="papers" aria-selected="false" class="band" data-target="#papers">Papers</button>
-          <button role="tab" aria-controls="code" aria-selected="false" class="band" data-target="#code">Code</button>
-          <button role="tab" aria-controls="talks" aria-selected="false" class="band" data-target="#talks">Talks</button>
-        </div>
-        <p class="hint">Move the cursor / tap to bend the flow • Press 1–4 to switch bands</p>
+<main>
+  <!-- Hero -->
+  <section id="about" class="hero" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <h1 id="hero-title">Shahrzad Mirzaei</h1>
+      <p class="hero-role">Application Developer · AI/ML Engineer</p>
+      <p class="hero-copy">
+        I build reliable, production-ready applications that connect
+        <span class="mono">research</span>,
+        <span class="mono">machine learning</span>, and
+        <span class="mono">clean engineering</span>.
+      </p>
+      <div class="hero-links">
+        <a href="mailto:sma318@sfu.ca">Email</a>
+        <a href="https://github.com/chercode" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/shahrzad-mirzaei" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.ca/citations?user=B_XY4b0AAAAJ" target="_blank" rel="noopener">Scholar</a>
       </div>
-    </section>
+    </div>
+    <div class="hero-panel">
+      <h2 class="mono">Now</h2>
+      <p>
+        Designing and integrating full-stack, ML-powered tools for
+        imaging and data-intensive systems — with a focus on
+        performance, observability, and clear documentation.
+      </p>
+      <ul class="hero-tags">
+        <li>Python · C++ · JavaScript</li>
+        <li>Flask · React · REST</li>
+        <li>PyTorch · TensorFlow · ONNX</li>
+        <li>Docker · CI/CD · AWS</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Content Sections -->
-    <section id="skills" class="section" aria-label="Skills">
-      <h2>Skills</h2>
-      <div class="grid" data-grid="skills"></div>
-    </section>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Technical Stack</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Languages</h3>
+        <p>Python, C++, Java, JavaScript, TypeScript, SQL, MATLAB</p>
+      </article>
+      <article class="card">
+        <h3>Backend & APIs</h3>
+        <p>Flask, Node.js, Express, .NET, REST, JSON, OAuth, JWT</p>
+      </article>
+      <article class="card">
+        <h3>Frontend & UI</h3>
+        <p>HTML5, CSS3, React, Responsive Design, UX prototyping</p>
+      </article>
+      <article class="card">
+        <h3>ML & Data</h3>
+        <p>PyTorch, TensorFlow, Scikit-learn, NumPy, Pandas, OpenCV, ONNX</p>
+      </article>
+      <article class="card">
+        <h3>Infra & DevOps</h3>
+        <p>AWS EC2, Docker, GitHub Actions, PostgreSQL, MySQL, MS SQL Server</p>
+      </article>
+      <article class="card">
+        <h3>Core Strengths</h3>
+        <p>System design, integration, testing, documentation, mentoring, SDLC ownership</p>
+      </article>
+    </div>
+  </section>
 
-    <section id="papers" class="section" aria-label="Papers">
-      <h2>Papers</h2>
-      <div class="grid" data-grid="papers"></div>
-    </section>
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
 
-    <section id="code" class="section" aria-label="Code">
-      <h2>Code</h2>
-      <div class="grid" data-grid="code"></div>
-    </section>
+      <article class="timeline-item">
+        <h3>Graduate Research Assistant — Software & ML Engineer</h3>
+        <div class="meta">Multimedia Systems Lab, Simon Fraser University · 2022 – 2023</div>
+        <ul>
+          <li>Built end-to-end tools for spectral data collection, image analysis, and visualization.</li>
+          <li>Integrated ONNX-optimized ML models into Flask/React apps for real-time analysis.</li>
+          <li>Owned requirements, UML design, testing, and deployment across web & mobile.</li>
+        </ul>
+      </article>
 
-    <section id="talks" class="section" aria-label="Talks">
-      <h2>Talks</h2>
-      <div class="grid" data-grid="talks"></div>
-    </section>
+      <article class="timeline-item">
+        <h3>Graduate Teaching Assistant</h3>
+        <div class="meta">School of Computing Science, SFU · 2022 – Present</div>
+        <ul>
+          <li>Supported courses in AI, Software Engineering, Databases, Data Science, Imaging.</li>
+          <li>Designed rubrics, graded code, and mentored 300+ students in Python, Java, SQL.</li>
+        </ul>
+      </article>
 
-    <!-- Ask Me (optional, client-only) -->
-    <aside id="askme-panel" class="askme" aria-label="Ask Me" hidden>
-      <div class="askme-inner">
-        <h3>Ask Me</h3>
-        <form id="askme-form" aria-label="Ask a question">
-          <label for="askme-input" class="visually-hidden">Your question</label>
-          <input id="askme-input" name="q" type="text" required
-                 placeholder="Try: What is spectral reconstruction?" />
-          <button type="submit">Send</button>
-        </form>
-        <div id="askme-response" class="askme-response" role="region" aria-live="polite"></div>
-        <p class="askme-note">
-          Runs entirely in your browser with mock answers.
-          You can plug in a serverless LLM endpoint later.
+      <article class="timeline-item">
+        <h3>Software Engineer Intern</h3>
+        <div class="meta">ARON Company · 2020 – 2021</div>
+        <ul>
+          <li>Developed RESTful Flask + PostgreSQL services for internal automation.</li>
+          <li>Implemented authentication, optimized queries, and shipped stable releases.</li>
+        </ul>
+      </article>
+
+      <article class="timeline-item">
+        <h3>Data Scientist Intern</h3>
+        <div class="meta">Kojafood · 2020</div>
+        <ul>
+          <li>Built a recommendation engine integrating SQL + Python APIs.</li>
+          <li>Improved engagement through scalable, production-aware ML.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>MobiLyzer — Mobile Liquid Analyzer</h3>
+        <p>
+          End-to-end mobile spectral analysis pipeline: Python backend, ONNX runtime, Android client.
         </p>
-      </div>
-    </aside>
-  </main>
+        <p class="meta">
+          IMWUT/UbiComp · Production-focused, reproducible, documented.
+        </p>
+        <a href="https://github.com/chercode/mobilyzer-imwut25" target="_blank" rel="noopener">View code</a>
+      </article>
 
-  <footer class="site-footer" role="contentinfo">
+      <article class="card">
+        <h3>Interactive RGB+NIR Photo Editing</h3>
+        <p>
+          React + TypeScript + REST tool for real-time RGB–NIR fusion and editing in the browser.
+        </p>
+        <p class="meta">ACM SIGGRAPH 2024</p>
+        <a href="https://github.com/samuel-antunes/RGB-NiR-Webapp" target="_blank" rel="noopener">View code</a>
+      </article>
+
+      <article class="card">
+        <h3>MobiSpectral</h3>
+        <p>
+          Deep learning inference modules for mobile hyperspectral imaging and analysis.
+        </p>
+        <p class="meta">ACM MobiCom 2023</p>
+        <a href="https://github.com/mobispectral/mobicom23_mobispectral" target="_blank" rel="noopener">View code</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <h2 class="section-title">Publications</h2>
+    <ul class="list">
+      <li>
+        Interactive RGB+NIR Photo Editing — ACM SIGGRAPH 2024
+        <a href="https://dl.acm.org/doi/10.1145/3641234.3671053" target="_blank" rel="noopener">Paper</a>
+      </li>
+      <li>
+        MobiSpectral — ACM MobiCom 2023
+        <a href="https://dl.acm.org/doi/10.1145/3570361.3613296" target="_blank" rel="noopener">Paper</a>
+      </li>
+      <li>
+        MobiLyzer — Fine-grained Mobile Liquid Analyzer — ACM IMWUT/UbiComp (under publication)
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
     <p>
-      <span id="copyright"></span>
-      · <a id="cv-link" href="#">CV</a>
-      · <a id="gh-link" href="#">GitHub</a>
-      · <a id="li-link" href="#">LinkedIn</a>
-      · <a id="gs-link" href="#">Google Scholar</a>
+      Open to roles in software engineering, ML engineering, and research-driven product teams.
     </p>
-  </footer>
+    <p class="mono">
+      sma318@sfu.ca · Vancouver, BC ·
+      <a href="https://github.com/chercode" target="_blank" rel="noopener">github.com/chercode</a>
+    </p>
+  </section>
+</main>
 
-  <script type="module">
-    import { initFlowField } from './js/flowfield.js';
-    import { initRenderer } from './js/renderer.js';
-    import { initUI } from './js/ui.js';
-    import { loadContent } from './js/content.js';
-    import { initAskMe } from './js/llm.js';
-    import './meta/analytics.js';
+<footer class="site-footer">
+  <span>© <span id="year"></span> Shahrzad Mirzaei</span>
+  <span class="dot">•</span>
+  <span>Built with HTML, CSS, and vanilla JS</span>
+</footer>
 
-    const canvas = document.getElementById('glcanvas');
-    const gl = canvas.getContext('webgl2', {
-      antialias: false,
-      preserveDrawingBuffer: false
-    });
-    const supportsGL2 = !!gl;
-
-    const state = {
-      particleCount: 8000,
-      dpi: Math.min(1.5, window.devicePixelRatio || 1),
-      prefersReduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    };
-
-    if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) state.particleCount = 4000;
-    if (!supportsGL2 || state.prefersReduced) state.particleCount = 1500;
-
-    const field = initFlowField();
-    const renderer = initRenderer(gl, canvas, state, field);
-    initUI(renderer, state);
-    loadContent();
-    initAskMe();
-  </script>
+<script src="./js/main.js"></script>
 </body>
 </html>
