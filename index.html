@@ -1,63 +1,131 @@
 <!doctype html>
-<section id="code" class="section" aria-label="Code">
-<h2>Code</h2>
-<div class="grid" data-grid="code"></div>
-</section>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shahrzad Mirzaei — AI/ML • Graphics</title>
+  <meta name="description" content="AI/ML engineer & researcher. Spectral imaging, computational photography, WebGL graphics. Portfolio, papers, code, talks." />
 
+  <!-- SEO / OpenGraph -->
+  <meta property="og:title" content="Shahrzad Mirzaei — Portfolio" />
+  <meta property="og:description" content="Spectral Flow Field portfolio: projects, papers, code, talks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chercode.github.io/" />
+  <meta property="og:image" content="https://chercode.github.io/assets/favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Shahrzad Mirzaei — Portfolio" />
+  <meta name="twitter:description" content="Spectral Flow Field portfolio: projects, papers, code, talks." />
 
-<section id="talks" class="section" aria-label="Talks">
-<h2>Talks</h2>
-<div class="grid" data-grid="talks"></div>
-</section>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="./css/styles.css" as="style" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a class="brand" href="#hero" aria-label="Go to top">Shahrzad Mirzaei</a>
+    <nav aria-label="Primary" class="top-nav">
+      <button class="nav-link" data-target="#skills">Skills</button>
+      <button class="nav-link" data-target="#papers">Papers</button>
+      <button class="nav-link" data-target="#code">Code</button>
+      <button class="nav-link" data-target="#talks">Talks</button>
+      <button class="nav-link askme-toggle" aria-expanded="false" aria-controls="askme-panel">Ask Me</button>
+    </nav>
+  </header>
 
+  <main id="main" class="main" tabindex="-1">
+    <!-- Hero / Spectral Flow Field -->
+    <section id="hero" class="hero" aria-label="Spectral Flow Field">
+      <canvas id="glcanvas" aria-hidden="true"></canvas>
+      <div class="hero-overlay" role="group" aria-label="Hero controls">
+        <div class="bands" role="tablist" aria-label="Sections">
+          <button role="tab" aria-controls="skills" aria-selected="true" class="band" data-target="#skills">Skills</button>
+          <button role="tab" aria-controls="papers" aria-selected="false" class="band" data-target="#papers">Papers</button>
+          <button role="tab" aria-controls="code" aria-selected="false" class="band" data-target="#code">Code</button>
+          <button role="tab" aria-controls="talks" aria-selected="false" class="band" data-target="#talks">Talks</button>
+        </div>
+        <p class="hint">Move the cursor / tap to bend the flow • Press 1–4 to switch bands</p>
+      </div>
+    </section>
 
-<!-- Optional Ask Me (client-only) -->
-<aside id="askme-panel" class="askme" aria-label="Ask Me" hidden>
-<div class="askme-inner">
-<h3>Ask Me</h3>
-<form id="askme-form" aria-label="Ask a question">
-<label for="askme-input" class="visually-hidden">Your question</label>
-<input id="askme-input" name="q" type="text" required placeholder="Try: What is spectral reconstruction?" />
-<button type="submit">Send</button>
-</form>
-<div id="askme-response" class="askme-response" role="region" aria-live="polite"></div>
-<p class="askme-note">This runs entirely in your browser with mock data. You can plug a serverless LLM later.</p>
-</div>
-</aside>
-</main>
+    <!-- Content Sections -->
+    <section id="skills" class="section" aria-label="Skills">
+      <h2>Skills</h2>
+      <div class="grid" data-grid="skills"></div>
+    </section>
 
+    <section id="papers" class="section" aria-label="Papers">
+      <h2>Papers</h2>
+      <div class="grid" data-grid="papers"></div>
+    </section>
 
-<footer class="site-footer" role="contentinfo">
-<p><span id="copyright"></span> · <a id="cv-link" href="#">CV</a> · <a id="gh-link" href="#">GitHub</a> · <a id="li-link" href="#">LinkedIn</a> · <a id="gs-link" href="#">Google Scholar</a></p>
-</footer>
+    <section id="code" class="section" aria-label="Code">
+      <h2>Code</h2>
+      <div class="grid" data-grid="code"></div>
+    </section>
 
+    <section id="talks" class="section" aria-label="Talks">
+      <h2>Talks</h2>
+      <div class="grid" data-grid="talks"></div>
+    </section>
 
-<script type="module">
-  import { initFlowField } from './js/flowfield.js';
-  import { initRenderer } from './js/renderer.js';
-  import { initUI } from './js/ui.js';
-  import { loadContent } from './js/content.js';
-  import { initAskMe } from './js/llm.js';
-  import './meta/analytics.js';
+    <!-- Ask Me (optional, client-only) -->
+    <aside id="askme-panel" class="askme" aria-label="Ask Me" hidden>
+      <div class="askme-inner">
+        <h3>Ask Me</h3>
+        <form id="askme-form" aria-label="Ask a question">
+          <label for="askme-input" class="visually-hidden">Your question</label>
+          <input id="askme-input" name="q" type="text" required
+                 placeholder="Try: What is spectral reconstruction?" />
+          <button type="submit">Send</button>
+        </form>
+        <div id="askme-response" class="askme-response" role="region" aria-live="polite"></div>
+        <p class="askme-note">
+          Runs entirely in your browser with mock answers.
+          You can plug in a serverless LLM endpoint later.
+        </p>
+      </div>
+    </aside>
+  </main>
 
-  const canvas = document.getElementById('glcanvas');
-  const gl = canvas.getContext('webgl2', { antialias: false, preserveDrawingBuffer: false });
-  const supportsGL2 = !!gl;
+  <footer class="site-footer" role="contentinfo">
+    <p>
+      <span id="copyright"></span>
+      · <a id="cv-link" href="#">CV</a>
+      · <a id="gh-link" href="#">GitHub</a>
+      · <a id="li-link" href="#">LinkedIn</a>
+      · <a id="gs-link" href="#">Google Scholar</a>
+    </p>
+  </footer>
 
-  const state = {
-    particleCount: 8000,
-    dpi: Math.min(1.5, window.devicePixelRatio || 1),
-    prefersReduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  };
+  <script type="module">
+    import { initFlowField } from './js/flowfield.js';
+    import { initRenderer } from './js/renderer.js';
+    import { initUI } from './js/ui.js';
+    import { loadContent } from './js/content.js';
+    import { initAskMe } from './js/llm.js';
+    import './meta/analytics.js';
 
-  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) state.particleCount = 4000;
-  if (!supportsGL2 || state.prefersReduced) state.particleCount = 1500;
+    const canvas = document.getElementById('glcanvas');
+    const gl = canvas.getContext('webgl2', {
+      antialias: false,
+      preserveDrawingBuffer: false
+    });
+    const supportsGL2 = !!gl;
 
-  const field = initFlowField();
-  const renderer = initRenderer(gl, canvas, state, field);
-  initUI(renderer, state);
-  loadContent();
-  initAskMe();
-</script>
+    const state = {
+      particleCount: 8000,
+      dpi: Math.min(1.5, window.devicePixelRatio || 1),
+      prefersReduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    };
+
+    if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) state.particleCount = 4000;
+    if (!supportsGL2 || state.prefersReduced) state.particleCount = 1500;
+
+    const field = initFlowField();
+    const renderer = initRenderer(gl, canvas, state, field);
+    initUI(renderer, state);
+    loadContent();
+    initAskMe();
+  </script>
 </body>
 </html>
